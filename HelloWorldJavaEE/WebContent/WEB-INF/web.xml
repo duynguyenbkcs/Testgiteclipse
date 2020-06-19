@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>HelloWorldJavaEE</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>cfgctx</servlet-name>
+  	<servlet-class>net.codejava.javaee.ServletConfigAndContext</servlet-class>
+  	
+  	<init-param>
+  		<param-name>Name</param-name>
+  		<param-value>Sasuke</param-value>
+  	</init-param>
+  	
+  </servlet>
+  
+    <servlet>
+  	<servlet-name>cfgctx2</servlet-name>
+  	<servlet-class>net.codejava.javaee.ServletConfigAndContext</servlet-class>
+  	
+  	<init-param>
+  		<param-name>Name</param-name>
+  		<param-value>Sasuke2</param-value>
+  	</init-param>
+  	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>cfgctx</servlet-name>
+  	<url-pattern>/cfgctx1</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+  	<servlet-name>cfgctx2</servlet-name>
+  	<url-pattern>/cfgctx2</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>PhoneNumber</param-name>
+  	<param-value>0394928986</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>Name</param-name>
+  	<param-value>Duy</param-value>
+  </context-param>
+  
+</web-app>
